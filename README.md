@@ -8,13 +8,15 @@
 
 <h1 align="center">Привет👋 Меня зовут Альберт!</h1>
 
+<hr>
+
 <h3 align="left">👩‍💻  Обо мне</h3>
 
 <p align="left">Я начинающий разработчик!</p>
 
-<h3 align="left">🛠 Языки и инструменты:</h3>
-
 <hr>
+
+<h3 align="left">🛠 Языки и инструменты:</h3>
 
 <div align="left">
   <div>

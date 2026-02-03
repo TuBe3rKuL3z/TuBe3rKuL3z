@@ -14,7 +14,7 @@
 
 <h3 align="left">🛠 Языки и инструменты:</h3>
 
-<rh>
+<hr>
 
 <div align="left">
   <div>

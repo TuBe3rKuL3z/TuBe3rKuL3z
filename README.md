@@ -16,7 +16,7 @@
 
 <h3 align="left">🛠 Языки и инструменты:</h3>
 
-<div align="left">
+<div style="display: flex; justify-content: space-between; align-items: center;">
   <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/phoenix/phoenix-original.svg" title="Phoenix Framework" alt="Phoenix" width="40" height="40"/>&nbsp;

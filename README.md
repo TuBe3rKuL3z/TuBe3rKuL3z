@@ -8,21 +8,13 @@
 
 <h1 align="center">Привет👋 Меня зовут Альберт!</h1>
 
-###
-
-###
-
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=filimonovalexey.filimonovalexey&"  />
-</div>
-
-###
-
 <h3 align="left">👩‍💻  Обо мне</h3>
 
 <p align="left">Я начинающий разработчик!</p>
 
 <h3 align="left">🛠 Языки и инструменты:</h3>
+
+<rh>
 
 <div align="left">
   <div>

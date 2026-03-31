@@ -34,4 +34,4 @@
 
 <br>
 
-![snake gif](https://githubusercontent.com)
+![Snake animation](https://githubusercontent.com)

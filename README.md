@@ -34,4 +34,4 @@
 
 <br>
 
-![Snake animation](https://githubusercontent.com)
+![Snake animation](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake.svg)

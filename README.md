@@ -32,5 +32,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg" title="Xcode" alt="Xcode" width="40" height="40"/>&nbsp;
 </div>
 
+<br>
 
-![snake gif](https://github.com/TuBe3rKuL3z/TuBe3rKuL3z/Ег/blob/output/github-snake-dark.svg)
+![snake gif](https://githubusercontent.com)

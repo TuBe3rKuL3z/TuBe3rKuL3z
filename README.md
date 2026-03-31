@@ -34,4 +34,4 @@
 
 <br>
 
-![Snake animation](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake.svg)
+![змея gif](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake-dark.svg)

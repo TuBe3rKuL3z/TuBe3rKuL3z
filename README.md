@@ -12,7 +12,7 @@
 
 <p align="left">Я начинающий разработчик!</p>
 
-<section>
+<article>
 
 <h3 align="left">🛠 Языки и инструменты:</h3>
 

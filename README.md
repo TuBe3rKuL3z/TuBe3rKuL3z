@@ -12,7 +12,7 @@
 
 <p align="left">Я начинающий разработчик! На данный момент я студент 3 курса по специальности «Информационные системы и программирование»</p>
 
-<hr>
+<h1></h1>
 
 <h3 align="left">🛠 Языки и инструменты:</h3>
 
@@ -31,7 +31,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="Visual Studio Code" alt="VSCode" width="40" height="40"/>&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" title="Visual Studio" alt="Visual Studio" width="40" height="40"/>&nbsp;
 </div>
-
 
 
 ![змея gif](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake-dark.svg)

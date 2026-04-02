@@ -32,6 +32,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" title="Visual Studio" alt="Visual Studio" width="40" height="40"/>&nbsp;
 </div>
 
-<br>
+<hr>
 
 ![змея gif](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake-dark.svg)

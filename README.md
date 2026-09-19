@@ -1,7 +1,7 @@
 <br clear="both">
 
 <div align="center">
-  <img src="./resource/rukia.gif" width="345" alt="Rukia GIF" />
+  <img src="./resource/rukia.gif" width="700" height="400" alt="Rukia GIF" />
 </div>
 
 ###

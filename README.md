@@ -1,7 +1,7 @@
 <br clear="both">
 
 <div align="center">
-  <img src="[https://pin.it/6Y4sAFk3c](https://assets.pinterest.com/ext/embed.html?id=227080006208388247)" width="345" alt="Pinterest GIF" />
+  <img src="[[https://pin.it/6Y4sAFk3c](https://assets.pinterest.com/ext/embed.html?id=227080006208388247)](https://ru.pinterest.com/pin/1092404453395847936/)" width="345" alt="Pinterest GIF" />
 </div>
 
 ###

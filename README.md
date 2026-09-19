@@ -1,7 +1,7 @@
 <br clear="both">
 
 <div align="center">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=227080006208388247" height="295" width="345" frameborder="0" scrolling="no" ></iframe>
+  <img src="https://pin.it/6Y4sAFk3c" width="345" alt="Pinterest GIF" />
 </div>
 
 ###

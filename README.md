@@ -1,7 +1,7 @@
 <br clear="both">
 
 <div align="center">
-  <img height="300" width="600" src="[https://c.tenor.com/bQCHJwgCNuMAAAAC/tenor.gif](https://pin.it/2AWpl0SyY)"  />
+  <img height="295" width="345" src="https://assets.pinterest.com/ext/embed.html?id=326299935525482462"  />
 </div>
 
 ###

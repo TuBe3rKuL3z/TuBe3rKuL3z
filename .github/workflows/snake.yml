@@ -66,11 +66,11 @@ jobs:
 
           outputs: |
 
-            dist/github-snake.svg
+            dist/github-snake.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
 
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake-dark.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
 
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/ocean.gif?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
 
         env:
 

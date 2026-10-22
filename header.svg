@@ -7,48 +7,91 @@
       <stop offset="100%" stop-color="#080b10" />
     </linearGradient>
 
-    <!-- Cosmic Nebulae Gradients -->
-    <radialGradient id="nebula-blue" cx="20%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#316b9e" stop-opacity="0.32" />
-      <stop offset="45%" stop-color="#316b9e" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#316b9e" stop-opacity="0" />
+    <!-- Cosmic Nebulae Gradients (opacity 0.15 - 0.25) -->
+    <radialGradient id="nebula-blue" cx="24%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#316b9e" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#316b9e" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#080b10" stop-opacity="0" />
     </radialGradient>
 
-    <radialGradient id="nebula-green" cx="80%" cy="70%" r="60%">
-      <stop offset="0%" stop-color="#3e9e4f" stop-opacity="0.28" />
-      <stop offset="50%" stop-color="#3e9e4f" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#3e9e4f" stop-opacity="0" />
+    <radialGradient id="nebula-green" cx="74%" cy="66%" r="55%">
+      <stop offset="0%" stop-color="#3e9e4f" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#3e9e4f" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#080b10" stop-opacity="0" />
     </radialGradient>
 
-    <radialGradient id="nebula-center" cx="50%" cy="45%" r="45%">
-      <stop offset="0%" stop-color="#7db1c7" stop-opacity="0.12" />
+    <radialGradient id="nebula-center" cx="48%" cy="42%" r="45%">
+      <stop offset="0%" stop-color="#7db1c7" stop-opacity="0.15" />
       <stop offset="60%" stop-color="#316b9e" stop-opacity="0.03" />
       <stop offset="100%" stop-color="#080b10" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Neon Border Gradient: #7db1c7 -> #89cf78 -->
+    <!-- Thin Neon Border Gradient: #7db1c7 -> #89cf78 -->
     <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7db1c7" />
       <stop offset="50%" stop-color="#a4f5e9" />
       <stop offset="100%" stop-color="#89cf78" />
     </linearGradient>
 
+    <!-- Planet Spherical Gradient: #316b9e -> #7db1c7 -->
+    <radialGradient id="planet-body" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#a4f5e9" stop-opacity="0.85" />
+      <stop offset="25%" stop-color="#7db1c7" />
+      <stop offset="70%" stop-color="#316b9e" />
+      <stop offset="100%" stop-color="#080b10" />
+    </radialGradient>
+
+    <!-- Planet Crescent Night Shadow -->
+    <radialGradient id="planet-shadow" cx="28%" cy="25%" r="72%">
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="85%" stop-color="#080b10" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#080b10" stop-opacity="0.95" />
+    </radialGradient>
+
     <!-- Meteor Trail Gradient: #a4f5e9 -> #b3ff5c -->
     <linearGradient id="meteor-trail" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#316b9e" stop-opacity="0" />
-      <stop offset="30%" stop-color="#a4f5e9" stop-opacity="0.35" />
+      <stop offset="35%" stop-color="#a4f5e9" stop-opacity="0.35" />
       <stop offset="75%" stop-color="#a4f5e9" stop-opacity="0.85" />
       <stop offset="100%" stop-color="#b3ff5c" stop-opacity="1" />
     </linearGradient>
 
-    <!-- Meteor Glowing Filter -->
-    <filter id="meteor-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <!-- Rocket Thruster Flame Gradient: #b3ff5c -> #89cf78 -->
+    <linearGradient id="flame-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#b3ff5c" stop-opacity="0.95" />
+      <stop offset="65%" stop-color="#89cf78" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#3e9e4f" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Rocket Fuselage Metallic Finish -->
+    <linearGradient id="rocket-hull" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#e2f5f1" />
+      <stop offset="100%" stop-color="#a4f5e9" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-filter" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+
+    <filter id="ring-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Planet Clip Path for Cloud Bands -->
+    <clipPath id="planet-clip">
+      <circle cx="0" cy="0" r="38" />
+    </clipPath>
 
     <!-- Card Clip Boundary -->
     <clipPath id="card-clip">
@@ -57,7 +100,7 @@
   </defs>
 
   <style>
-    /* Global Container Styles */
+    /* Global Canvas Styling */
     svg {
       cursor: pointer;
       user-select: none;
@@ -78,56 +121,39 @@
       filter: drop-shadow(0 0 5px #b3ff5c) drop-shadow(0 0 12px rgba(179, 255, 92, 0.7));
     }
 
-    /* Nickname Header */
-    .nickname {
-      font-family: 'Space Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace, -apple-system, sans-serif;
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: 3.5px;
+    /* Line 1: Header / Nickname (y="85") */
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       fill: #ffffff;
-      text-anchor: middle;
       transition: fill 0.4s ease, filter 0.4s ease;
     }
 
-    svg:hover .nickname,
-    .nickname:hover {
+    svg:hover .title,
+    .title:hover {
       fill: #b3ff5c;
-      filter: drop-shadow(0 0 8px #b3ff5c) drop-shadow(0 0 18px rgba(179, 255, 92, 0.5));
+      filter: drop-shadow(0 0 8px #b3ff5c) drop-shadow(0 0 16px rgba(179, 255, 92, 0.5));
     }
 
-    /* Subtitle */
+    /* Line 2: Subtitle (y="125") */
     .subtitle {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 15.5px;
+      font-size: 16px;
       font-weight: 400;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.3px;
       fill: #a4f5e9;
-      text-anchor: middle;
       opacity: 0.95;
     }
 
-    /* Meme Status Container &amp; Text */
-    .status-pill {
-      fill: #080b10;
-      fill-opacity: 0.65;
-      stroke: #316b9e;
-      stroke-width: 1;
-      stroke-opacity: 0.45;
-      transition: stroke 0.35s ease, stroke-opacity 0.35s ease, filter 0.35s ease;
-    }
-
-    svg:hover .status-pill {
-      stroke: #89cf78;
-      stroke-opacity: 0.8;
-      filter: drop-shadow(0 0 6px rgba(137, 207, 120, 0.35));
-    }
-
-    .status-text {
-      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', Consolas, 'Courier New', monospace;
-      font-size: 13.5px;
-      letter-spacing: 0.6px;
+    /* Line 3: Terminal Meme Status (y="165") */
+    .terminal {
+      font-family: 'Courier New', Courier, 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.4px;
       fill: #89cf78;
-      text-anchor: middle;
     }
 
     /* Terminal Blinking Cursor */
@@ -142,20 +168,20 @@
       font-weight: 700;
     }
 
-    /* Nebula Slow Breathing */
+    /* Cosmic Nebula Breathing */
     @keyframes nebulaPulse {
-      0%, 100% { opacity: 0.72; }
+      0%, 100% { opacity: 0.75; }
       50% { opacity: 1; }
     }
 
     .nebula-layer {
-      animation: nebulaPulse 10s ease-in-out infinite;
+      animation: nebulaPulse 9s ease-in-out infinite;
     }
 
-    /* Twinkling Stars */
+    /* Twinkling Static Stars */
     @keyframes twinkle {
       0%, 100% {
-        opacity: 0.22;
+        opacity: 0.2;
         transform: scale(0.85);
       }
       50% {
@@ -176,7 +202,7 @@
     .star-d5 { animation: twinkle 2.8s ease-in-out infinite 2.4s; }
     .star-d6 { animation: twinkle 3.8s ease-in-out infinite 1.0s; }
 
-    /* Shooting Stars (Meteors) at 45° */
+    /* Falling Meteors at 45° */
     @keyframes meteor1 {
       0% {
         transform: translate(60px, -70px);
@@ -197,18 +223,18 @@
 
     @keyframes meteor2 {
       0% {
-        transform: translate(280px, -70px);
+        transform: translate(300px, -70px);
         opacity: 0;
       }
       2% {
         opacity: 1;
       }
       16% {
-        transform: translate(600px, 250px);
+        transform: translate(620px, 250px);
         opacity: 0;
       }
       100% {
-        transform: translate(600px, 250px);
+        transform: translate(620px, 250px);
         opacity: 0;
       }
     }
@@ -253,98 +279,194 @@
     .meteor-2 { animation: meteor2 6.8s linear infinite 1.9s; }
     .meteor-3 { animation: meteor3 7.4s linear infinite 3.7s; }
     .meteor-4 { animation: meteor4 6.2s linear infinite 5.1s; }
+
+    /* Rocket Hovering and Floating Animation */
+    @keyframes rocketFloat {
+      0%, 100% {
+        transform: translate(585px, 80px) rotate(38deg) translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translate(585px, 72px) rotate(40deg) translateY(-6px) rotate(-1.5deg);
+      }
+    }
+
+    .rocket-group {
+      animation: rocketFloat 3.8s ease-in-out infinite;
+    }
+
+    /* Rocket Thruster Flame Flicker */
+    @keyframes flameFlicker {
+      0%, 100% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 0.88;
+      }
+      50% {
+        transform: scaleY(1.32) scaleX(0.92);
+        opacity: 1;
+        filter: drop-shadow(0 0 5px #b3ff5c);
+      }
+    }
+
+    .rocket-flame {
+      transform-origin: 0px 9px;
+      animation: flameFlicker 0.35s ease-in-out infinite alternate;
+    }
+
+    /* Planet Subtle Glow */
+    @keyframes planetAura {
+      0%, 100% { opacity: 0.82; }
+      50% { opacity: 1; }
+    }
+
+    .planet-glow {
+      animation: planetAura 6s ease-in-out infinite alternate;
+    }
   </style>
 
   <g clip-path="url(#card-clip)">
     <!-- Deep Space Background -->
     <rect width="800" height="240" fill="url(#space-bg)" />
 
-    <!-- Cosmic Nebula Layer -->
+    <!-- Cosmic Nebula Layer (opacity 0.15–0.25) -->
     <g class="nebula-layer">
       <!-- Blue Nebula Region -->
-      <ellipse cx="200" cy="80" rx="330" ry="170" fill="url(#nebula-blue)" />
+      <ellipse cx="220" cy="80" rx="340" ry="170" fill="url(#nebula-blue)" />
       <!-- Green Nebula Region -->
-      <ellipse cx="620" cy="160" rx="310" ry="160" fill="url(#nebula-green)" />
-      <!-- Center Blend Glow -->
-      <ellipse cx="400" cy="115" rx="260" ry="120" fill="url(#nebula-center)" />
+      <ellipse cx="630" cy="155" rx="300" ry="160" fill="url(#nebula-green)" />
+      <!-- Central Soft Ambient Blend -->
+      <ellipse cx="420" cy="115" rx="260" ry="120" fill="url(#nebula-center)" />
     </g>
 
-    <!-- Twinkling Static Stars (24 stars, r="1" - "1.5") -->
+    <!-- Twinkling Static Stars (22 dots, r="1" - "1.5") -->
     <g class="stars-layer">
-      <!-- Upper sky stars -->
-      <circle class="star star-d1" cx="55" cy="35" r="1.2" fill="#a4f5e9" />
-      <circle class="star star-d2" cx="115" cy="85" r="1.0" fill="#ffffff" />
-      <circle class="star star-d3" cx="150" cy="30" r="1.4" fill="#7db1c7" />
-      <circle class="star star-d4" cx="210" cy="65" r="1.1" fill="#b3ff5c" />
-      <circle class="star star-d5" cx="260" cy="25" r="1.5" fill="#ffffff" />
-      <circle class="star star-d6" cx="315" cy="55" r="1.0" fill="#a4f5e9" />
-      <circle class="star star-d1" cx="375" cy="25" r="1.3" fill="#89cf78" />
-      <circle class="star star-d2" cx="445" cy="45" r="1.1" fill="#7db1c7" />
-      <circle class="star star-d3" cx="505" cy="20" r="1.5" fill="#ffffff" />
-      <circle class="star star-d4" cx="560" cy="60" r="1.2" fill="#a4f5e9" />
-      <circle class="star star-d5" cx="625" cy="30" r="1.4" fill="#b3ff5c" />
-      <circle class="star star-d6" cx="680" cy="70" r="1.0" fill="#ffffff" />
-      <circle class="star star-d1" cx="745" cy="40" r="1.5" fill="#7db1c7" />
-
-      <!-- Side and lower sky stars -->
-      <circle class="star star-d2" cx="770" cy="115" r="1.1" fill="#89cf78" />
-      <circle class="star star-d3" cx="735" cy="175" r="1.3" fill="#a4f5e9" />
-      <circle class="star star-d4" cx="670" cy="210" r="1.0" fill="#ffffff" />
-      <circle class="star star-d5" cx="605" cy="180" r="1.4" fill="#b3ff5c" />
-      <circle class="star star-d6" cx="540" cy="215" r="1.2" fill="#7db1c7" />
-      <circle class="star star-d1" cx="470" cy="195" r="1.0" fill="#a4f5e9" />
-      <circle class="star star-d2" cx="330" cy="215" r="1.5" fill="#ffffff" />
-      <circle class="star star-d3" cx="265" cy="190" r="1.1" fill="#89cf78" />
-      <circle class="star star-d4" cx="190" cy="210" r="1.4" fill="#b3ff5c" />
-      <circle class="star star-d5" cx="125" cy="165" r="1.0" fill="#7db1c7" />
-      <circle class="star star-d6" cx="65" cy="185" r="1.3" fill="#ffffff" />
+      <circle class="star star-d1" cx="40" cy="35" r="1.2" fill="#a4f5e9" />
+      <circle class="star star-d2" cx="120" cy="45" r="1.0" fill="#ffffff" />
+      <circle class="star star-d3" cx="190" cy="25" r="1.4" fill="#7db1c7" />
+      <circle class="star star-d4" cx="280" cy="50" r="1.1" fill="#b3ff5c" />
+      <circle class="star star-d5" cx="350" cy="30" r="1.5" fill="#ffffff" />
+      <circle class="star star-d6" cx="420" cy="65" r="1.0" fill="#a4f5e9" />
+      <circle class="star star-d1" cx="480" cy="35" r="1.3" fill="#89cf78" />
+      <circle class="star star-d2" cx="530" cy="85" r="1.1" fill="#7db1c7" />
+      <circle class="star star-d3" cx="560" cy="30" r="1.5" fill="#ffffff" />
+      <circle class="star star-d4" cx="630" cy="45" r="1.2" fill="#a4f5e9" />
+      <circle class="star star-d5" cx="720" cy="35" r="1.4" fill="#b3ff5c" />
+      <circle class="star star-d6" cx="760" cy="75" r="1.0" fill="#ffffff" />
+      <circle class="star star-d1" cx="750" cy="180" r="1.3" fill="#7db1c7" />
+      <circle class="star star-d2" cx="720" cy="215" r="1.1" fill="#89cf78" />
+      <circle class="star star-d3" cx="600" cy="215" r="1.4" fill="#a4f5e9" />
+      <circle class="star star-d4" cx="510" cy="190" r="1.0" fill="#ffffff" />
+      <circle class="star star-d5" cx="440" cy="215" r="1.4" fill="#b3ff5c" />
+      <circle class="star star-d6" cx="360" cy="195" r="1.2" fill="#7db1c7" />
+      <circle class="star star-d1" cx="270" cy="210" r="1.0" fill="#a4f5e9" />
+      <circle class="star star-d2" cx="180" cy="185" r="1.5" fill="#ffffff" />
+      <circle class="star star-d3" cx="110" cy="215" r="1.1" fill="#89cf78" />
+      <circle class="star star-d4" cx="60" cy="180" r="1.3" fill="#b3ff5c" />
     </g>
 
-    <!-- Shooting Stars (Meteors at 45°) -->
+    <!-- Falling Meteors at 45° -->
     <g class="meteors-layer">
       <!-- Meteor 1 -->
       <g class="meteor-1">
         <line x1="0" y1="0" x2="55" y2="55" stroke="url(#meteor-trail)" stroke-width="2" stroke-linecap="round" />
-        <circle cx="55" cy="55" r="1.5" fill="#ffffff" filter="url(#meteor-glow)" />
-        <circle cx="55" cy="55" r="2.5" fill="#b3ff5c" opacity="0.6" filter="url(#meteor-glow)" />
+        <circle cx="55" cy="55" r="1.5" fill="#ffffff" filter="url(#glow-filter)" />
+        <circle cx="55" cy="55" r="2.5" fill="#b3ff5c" opacity="0.6" filter="url(#glow-filter)" />
       </g>
 
       <!-- Meteor 2 -->
       <g class="meteor-2">
         <line x1="0" y1="0" x2="60" y2="60" stroke="url(#meteor-trail)" stroke-width="2.2" stroke-linecap="round" />
-        <circle cx="60" cy="60" r="1.6" fill="#ffffff" filter="url(#meteor-glow)" />
-        <circle cx="60" cy="60" r="2.8" fill="#b3ff5c" opacity="0.6" filter="url(#meteor-glow)" />
+        <circle cx="60" cy="60" r="1.6" fill="#ffffff" filter="url(#glow-filter)" />
+        <circle cx="60" cy="60" r="2.8" fill="#b3ff5c" opacity="0.6" filter="url(#glow-filter)" />
       </g>
 
       <!-- Meteor 3 -->
       <g class="meteor-3">
         <line x1="0" y1="0" x2="50" y2="50" stroke="url(#meteor-trail)" stroke-width="1.8" stroke-linecap="round" />
-        <circle cx="50" cy="50" r="1.4" fill="#ffffff" filter="url(#meteor-glow)" />
-        <circle cx="50" cy="50" r="2.4" fill="#b3ff5c" opacity="0.6" filter="url(#meteor-glow)" />
+        <circle cx="50" cy="50" r="1.4" fill="#ffffff" filter="url(#glow-filter)" />
+        <circle cx="50" cy="50" r="2.4" fill="#b3ff5c" opacity="0.6" filter="url(#glow-filter)" />
       </g>
 
       <!-- Meteor 4 -->
       <g class="meteor-4">
         <line x1="0" y1="0" x2="52" y2="52" stroke="url(#meteor-trail)" stroke-width="2" stroke-linecap="round" />
-        <circle cx="52" cy="52" r="1.5" fill="#ffffff" filter="url(#meteor-glow)" />
-        <circle cx="52" cy="52" r="2.5" fill="#b3ff5c" opacity="0.6" filter="url(#meteor-glow)" />
+        <circle cx="52" cy="52" r="1.5" fill="#ffffff" filter="url(#glow-filter)" />
+        <circle cx="52" cy="52" r="2.5" fill="#b3ff5c" opacity="0.6" filter="url(#glow-filter)" />
       </g>
     </g>
 
-    <!-- Typography &amp; Content Elements -->
-    <!-- Nickname Header -->
-    <text x="400" y="92" class="nickname">TuBeErKuL3z</text>
+    <!-- Cosmic Objects on Right (x ~ 600 - 720) -->
+    <!-- 1. Stylized Planet with Glowing Inclined Ring -->
+    <g class="planet-glow" transform="translate(660, 126)">
+      <!-- Ring: Back Half (passes behind planet) -->
+      <g transform="rotate(-22)">
+        <path d="M -72 0 A 72 17 0 0 1 72 0" fill="none" stroke="#7db1c7" stroke-width="5" stroke-opacity="0.35" />
+        <path d="M -70 0 A 70 16 0 0 1 70 0" fill="none" stroke="#a4f5e9" stroke-width="2.2" stroke-opacity="0.6" />
+      </g>
 
-    <!-- Subtitle -->
-    <text x="400" y="130" class="subtitle">Automating workflows &amp; architecting seamless logic</text>
+      <!-- Planet Sphere (#316b9e -> #7db1c7) -->
+      <circle cx="0" cy="0" r="38" fill="url(#planet-body)" />
 
-    <!-- Bottom Meme Status Badge -->
-    <g class="status-container">
-      <rect x="235" y="162" width="330" height="34" rx="17" class="status-pill" />
-      <text x="400" y="184" class="status-text">&gt; Fix 1 bug, summon 2 more.<tspan class="cursor">_</tspan></text>
+      <!-- Planet Atmospheric Cloud Stripes (Clipped to sphere) -->
+      <g clip-path="url(#planet-clip)">
+        <path d="M -42 -14 Q 0 -6 42 -14" stroke="#7db1c7" stroke-width="4.5" stroke-opacity="0.35" fill="none" />
+        <path d="M -42 6 Q 0 14 42 6" stroke="#316b9e" stroke-width="6.5" stroke-opacity="0.45" fill="none" />
+        <path d="M -42 20 Q 0 26 42 20" stroke="#7db1c7" stroke-width="3" stroke-opacity="0.25" fill="none" />
+        <!-- Planet Shadow/Night Crescent -->
+        <circle cx="0" cy="0" r="38" fill="url(#planet-shadow)" />
+      </g>
+
+      <!-- Ring: Front Half (passes in front of planet with radiant #a4f5e9 glow) -->
+      <g transform="rotate(-22)">
+        <path d="M 72 0 A 72 17 0 0 1 -72 0" fill="none" stroke="#a4f5e9" stroke-width="5" stroke-opacity="0.9" filter="url(#ring-glow)" />
+        <path d="M 70 0 A 70 16 0 0 1 -70 0" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.85" />
+        <path d="M 78 0 A 78 19 0 0 1 -78 0" fill="none" stroke="#7db1c7" stroke-width="1.2" stroke-opacity="0.5" />
+      </g>
     </g>
+
+    <!-- 2. Stylized Rocket Flying Upward with Hover Animation -->
+    <g class="rocket-group">
+      <!-- Thruster Exhaust Flame (#b3ff5c with pulse) -->
+      <g class="rocket-flame">
+        <!-- Outer Glowing Flame Plume -->
+        <path d="M -3.5 9 Q 0 15, -3 21 Q 0 28, 0 29 Q 0 28, 3 21 Q 0 15, 3.5 9 Z" fill="url(#flame-grad)" filter="url(#glow-filter)" />
+        <!-- Inner Hot Core -->
+        <path d="M -1.8 9 Q 0 14, -1 18 Q 0 22, 0 23 Q 0 22, 1 18 Q 0 14, 1.8 9 Z" fill="#ffffff" opacity="0.9" />
+      </g>
+
+      <!-- Left Aerodynamic Fin -->
+      <path d="M -7 0 L -14 9 L -7 6 Z" fill="#316b9e" />
+      <!-- Right Aerodynamic Fin -->
+      <path d="M 7 0 L 14 9 L 7 6 Z" fill="#316b9e" />
+
+      <!-- Engine Nozzle -->
+      <path d="M -3.5 6 L 3.5 6 L 2.5 9.5 L -2.5 9.5 Z" fill="#316b9e" />
+
+      <!-- Rocket Fuselage Body -->
+      <path d="M 0 -19 C 5.5 -13, 7.5 -3, 7.5 6 L -7.5 6 C -7.5 -3, -5.5 -13, 0 -19 Z" fill="url(#rocket-hull)" />
+
+      <!-- Nose Cone Accent (#7db1c7) -->
+      <path d="M 0 -19 C 3.2 -14, 4.5 -10, 4.5 -6 L -4.5 -6 C -4.5 -10, -3.2 -14, 0 -19 Z" fill="#7db1c7" />
+
+      <!-- Center Body Trim Line -->
+      <rect x="-0.8" y="1" width="1.6" height="5" fill="#7db1c7" rx="0.5" />
+
+      <!-- Porthole Window -->
+      <circle cx="0" cy="-2" r="3.6" fill="#316b9e" />
+      <circle cx="0" cy="-2" r="2.4" fill="#a4f5e9" />
+      <circle cx="-0.8" cy="-2.8" r="0.8" fill="#ffffff" />
+    </g>
+
+    <!-- Three-Level Left Text Block (Strictly x="50") -->
+    <!-- Line 1: Title (y="85"): "TuBeErKuL3z" (sans-serif/system, bold, 32px, #ffffff -> #b3ff5c on hover) -->
+    <text x="50" y="85" class="title">TuBeErKuL3z</text>
+
+    <!-- Line 2: Subtitle (y="125"): "Building software, games and tools" (sans-serif, 16px, #a4f5e9) -->
+    <text x="50" y="125" class="subtitle">Building software, games and tools</text>
+
+    <!-- Line 3: Terminal (y="165"): "> Fixed 1 bug — 2 new appeared_" (Courier New/monospace, 14px, #89cf78, cursor #b3ff5c) -->
+    <text x="50" y="165" class="terminal">&gt; Fixed 1 bug &#8212; 2 new appeared<tspan class="cursor">_</tspan></text>
   </g>
 
-  <!-- Thin Neon Border (Top layer for crisp edges &amp; hover response) -->
+  <!-- Thin Neon Border: Gradient #7db1c7 -> #89cf78 (on hover enhances to #b3ff5c) -->
   <rect class="neon-border" x="1" y="1" width="798" height="238" rx="12" />
 </svg>

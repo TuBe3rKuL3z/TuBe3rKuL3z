@@ -38,15 +38,44 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 3: Apply shifting gradient to snake SVG animation
+      # Step 3: Apply shifting gradient and segment colors to snake SVG animation
       - name: Apply Gradient to Snake Animation
         run: |
-          for f in dist/*.svg; do
-            if [ -f "$f" ]; then
-              sed -i 's|<desc>|<defs><linearGradient id="snake-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3e9e4f"><animate attributeName="stop-color" values="#3e9e4f;#89cf78;#b3ff5c;#3e9e4f" dur="4s" repeatCount="indefinite"/></stop><stop offset="50%" stop-color="#89cf78"><animate attributeName="stop-color" values="#89cf78;#b3ff5c;#3e9e4f;#89cf78" dur="4s" repeatCount="indefinite"/></stop><stop offset="100%" stop-color="#b3ff5c"><animate attributeName="stop-color" values="#b3ff5c;#3e9e4f;#89cf78;#b3ff5c" dur="4s" repeatCount="indefinite"/></stop></linearGradient></defs><desc>|g' "$f"
-              sed -i 's|fill:var(--cs)|fill:url(#snake-gradient)|g' "$f"
-            fi
-          done
+          sudo chown -R $USER:$USER dist || true
+          python3 -c '
+          import glob
+
+          for path in glob.glob("dist/*.svg"):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      content = f.read()
+
+                  # Inject linearGradient with animated shifting stops
+                  grad = (
+                      "<defs><linearGradient id=\"snake-gradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">"
+                      "<stop offset=\"0%\" stop-color=\"#3e9e4f\"><animate attributeName=\"stop-color\" values=\"#3e9e4f;#89cf78;#b3ff5c;#3e9e4f\" dur=\"4s\" repeatCount=\"indefinite\"/></stop>"
+                      "<stop offset=\"50%\" stop-color=\"#89cf78\"><animate attributeName=\"stop-color\" values=\"#89cf78;#b3ff5c;#3e9e4f;#89cf78\" dur=\"4s\" repeatCount=\"indefinite\"/></stop>"
+                      "<stop offset=\"100%\" stop-color=\"#b3ff5c\"><animate attributeName=\"stop-color\" values=\"#b3ff5c;#3e9e4f;#89cf78;#b3ff5c\" dur=\"4s\" repeatCount=\"indefinite\"/></stop>"
+                      "</linearGradient></defs>"
+                  )
+
+                  if "<defs>" not in content:
+                      content = content.replace("<desc>", grad + "<desc>", 1)
+
+                  # Apply gradient fill
+                  content = content.replace("fill:var(--cs)", "fill:url(#snake-gradient)")
+
+                  # Apply body segment colors: head (#b3ff5c) -> body (#89cf78, #65b863) -> tail (#3e9e4f)
+                  seg_css = ".s.s0{fill:#b3ff5c;filter:drop-shadow(0 0 2px #b3ff5c);}.s.s1{fill:#89cf78;}.s.s2{fill:#65b863;}.s.s3{fill:#3e9e4f;}.s.s0{"
+                  if ".s.s0{" in content and "filter:drop-shadow" not in content:
+                      content = content.replace(".s.s0{", seg_css, 1)
+
+                  with open(path, "w", encoding="utf-8") as f:
+                      f.write(content)
+                  print(f"Gradient successfully applied to {path}")
+              except Exception as e:
+                  print(f"Notice while processing {path}: {e}")
+          ' || true
 
       # Step 4: Deploy the generated files to the 'output' branch
       - name: Deploy to Output Branch

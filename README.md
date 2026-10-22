@@ -41,7 +41,7 @@
     <td align="center" colspan="2" style="border: none; padding-top: 15px;">
       <p align="center"><b>Базы данных</b></p>
       <img src="https://skillicons.dev/icons?i=postgres,sqlite&theme=dark" alt="Databases" />
-      <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" height="48" alt="MSSQL" style="vertical-align: middle; margin-left: 6px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="48" height="48" alt="MSSQL" title="Microsoft SQL Server" style="vertical-align: middle; margin-left: 6px;" />
     </td>
   </tr>
 </table>

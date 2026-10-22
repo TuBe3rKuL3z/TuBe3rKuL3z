@@ -14,33 +14,37 @@
 
 <h1></h1>
 
-<h3 align="left">Языки и инструменты</h3>
-
-<h4 align="left">Языки программирования</h4>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=cs,cpp,py,java,kotlin,ts,js&theme=dark" alt="Языки программирования" />
+<p align="center">
+  <img src="./tools-title.svg" alt="Языки и инструменты" />
 </p>
 
-<h4 align="left">Веб-технологии и форматы</h4>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=dotnet,nodejs,angular,html,css,json&theme=dark" alt="Веб-технологии и форматы" />
-</p>
-
-<h4 align="left">Базы данных</h4>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=postgres,sqlite&theme=dark" alt="Базы данных" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="48" height="48" title="MS SQL Server" alt="MS SQL Server" />
-</p>
-
-<h4 align="left">IDE и экосистема</h4>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,androidstudio,git,github&theme=dark" alt="IDE и экосистема" />
-</p>
-
-<h4 align="left">ОС и терминал</h4>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash&theme=dark" alt="ОС и терминал" />
-</p>
+<table align="center" border="0" style="border: none; background: transparent;">
+  <!-- Верхний ряд: 2 симметричные колонки -->
+  <tr style="border: none;">
+    <td align="center" valign="top" width="50%" style="border: none; padding: 15px;">
+      <p align="center"><b>Языки программирования</b></p>
+      <img src="https://skillicons.dev/icons?i=cs,cpp,py,java,kotlin,ts,js&theme=dark" alt="Languages" />
+      <br/><br/>
+      <p align="center"><b>Веб-технологии и форматы</b></p>
+      <img src="https://skillicons.dev/icons?i=dotnet,nodejs,angular,html,css&theme=dark" alt="Web" />
+    </td>
+    <td align="center" valign="top" width="50%" style="border: none; padding: 15px;">
+      <p align="center"><b>IDE и экосистема</b></p>
+      <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,androidstudio,git,github&theme=dark" alt="IDEs" />
+      <br/><br/>
+      <p align="center"><b>ОС и терминал</b></p>
+      <img src="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash&theme=dark" alt="OS" />
+    </td>
+  </tr>
+  <!-- Нижний ряд: Базы данных ровно по центру на всю ширину -->
+  <tr style="border: none;">
+    <td align="center" colspan="2" style="border: none; padding-top: 15px;">
+      <p align="center"><b>Базы данных</b></p>
+      <img src="https://skillicons.dev/icons?i=postgres,sqlite&theme=dark" alt="Databases" />
+      <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" height="48" alt="MSSQL" style="vertical-align: middle; margin-left: 6px;" />
+    </td>
+  </tr>
+</table>
 
 
 ![змея gif](https://raw.githubusercontent.com/TuBe3rKuL3z/TuBe3rKuL3z/refs/heads/output/github-snake-dark.svg)

@@ -1,98 +1,58 @@
 name: GitHub Snake Game
 
-
-
 on:
-
   # Schedule the workflow to run daily at midnight UTC
-
   schedule:
-
     - cron: "0 0 * * *"
 
-
-
   # Allow manual triggering of the workflow
-
   workflow_dispatch:
 
-
-
   # Trigger the workflow on pushes to the main branch
-
   push:
-
     branches:
-
       - main
 
-
-
 jobs:
-
   generate:
-
     runs-on: ubuntu-latest
-
     timeout-minutes: 10
 
-
-
     steps:
-
       # Step 1: Checkout the repository
-
       - name: Checkout Repository
-
         uses: actions/checkout@v3
 
-
-
       # Step 2: Generate the snake animations
-
       - name: Generate GitHub Contributions Snake Animations
-
         uses: Platane/snk@v3
-
         with:
-
           # GitHub username to generate the animation for
-
           github_user_name: ${{ github.repository_owner }}
 
-
-
           # Define the output files and their configurations
-
           outputs: |
-
-            dist/github-snake.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
-
-            dist/github-snake-dark.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
-
-            dist/ocean.gif?color_snake=%23b3ff5c&color_dots=%23161b22,%23316b9e,%237db1c7,%233e9e4f,%2389cf78
-
+            dist/github-snake.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%231a3d5c,%23316b9e,%237db1c7,%23a4f5e9
+            dist/github-snake-dark.svg?color_snake=%23b3ff5c&color_dots=%23161b22,%231a3d5c,%23316b9e,%237db1c7,%23a4f5e9
+            dist/ocean.gif?color_snake=%23b3ff5c&color_dots=%23161b22,%231a3d5c,%23316b9e,%237db1c7,%23a4f5e9
         env:
-
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Step 3: Apply shifting gradient to snake SVG animation
+      - name: Apply Gradient to Snake Animation
+        run: |
+          for f in dist/*.svg; do
+            if [ -f "$f" ]; then
+              sed -i 's|<desc>|<defs><linearGradient id="snake-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3e9e4f"><animate attributeName="stop-color" values="#3e9e4f;#89cf78;#b3ff5c;#3e9e4f" dur="4s" repeatCount="indefinite"/></stop><stop offset="50%" stop-color="#89cf78"><animate attributeName="stop-color" values="#89cf78;#b3ff5c;#3e9e4f;#89cf78" dur="4s" repeatCount="indefinite"/></stop><stop offset="100%" stop-color="#b3ff5c"><animate attributeName="stop-color" values="#b3ff5c;#3e9e4f;#89cf78;#b3ff5c" dur="4s" repeatCount="indefinite"/></stop></linearGradient></defs><desc>|g' "$f"
+              sed -i 's|fill:var(--cs)|fill:url(#snake-gradient)|g' "$f"
+            fi
+          done
 
-
-      # Step 3: Deploy the generated files to the 'output' branch
-
+      # Step 4: Deploy the generated files to the 'output' branch
       - name: Deploy to Output Branch
-
         uses: peaceiris/actions-gh-pages@v3
-
         with:
-
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
           publish_dir: ./dist
-
           publish_branch: output
-
-          # Optionally, you can set a custom commit message
-
           commit_message: "Update snake animation [skip ci]"
-

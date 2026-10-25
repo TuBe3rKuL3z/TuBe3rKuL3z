@@ -25,24 +25,24 @@
       <p align="center"><b>Языки программирования</b></p>
       <div style="white-space: nowrap;">
         <nobr>
-          <img src="https://skillicons.dev/icons?i=cs&theme=dark" height="40" alt="C#" title="C#" />
-          <img src="https://skillicons.dev/icons?i=cpp&theme=dark" height="40" alt="C++" title="C++" />
-          <img src="https://skillicons.dev/icons?i=py&theme=dark" height="40" alt="Python" title="Python" />
-          <img src="https://skillicons.dev/icons?i=java&theme=dark" height="40" alt="Java" title="Java" />
-          <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" height="40" alt="Kotlin" title="Kotlin" />
-          <img src="https://skillicons.dev/icons?i=ts&theme=dark" height="40" alt="TypeScript" title="TypeScript" />
-          <img src="https://skillicons.dev/icons?i=js&theme=dark" height="40" alt="JavaScript" title="JavaScript" />
+          <a href="https://learn.microsoft.com/dotnet/csharp/" title="C#"><img src="https://skillicons.dev/icons?i=cs&theme=dark" height="40" alt="C#" /></a>
+          <a href="https://isocpp.org/" title="C++"><img src="https://skillicons.dev/icons?i=cpp&theme=dark" height="40" alt="C++" /></a>
+          <a href="https://www.python.org/" title="Python"><img src="https://skillicons.dev/icons?i=py&theme=dark" height="40" alt="Python" /></a>
+          <a href="https://www.java.com/" title="Java"><img src="https://skillicons.dev/icons?i=java&theme=dark" height="40" alt="Java" /></a>
+          <a href="https://kotlinlang.org/" title="Kotlin"><img src="https://skillicons.dev/icons?i=kotlin&theme=dark" height="40" alt="Kotlin" /></a>
+          <a href="https://www.typescriptlang.org/" title="TypeScript"><img src="https://skillicons.dev/icons?i=ts&theme=dark" height="40" alt="TypeScript" /></a>
+          <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" height="40" alt="JavaScript" /></a>
         </nobr>
       </div>
       <br/><br/>
       <p align="center"><b>Веб-технологии и форматы</b></p>
       <div style="white-space: nowrap;">
         <nobr>
-          <img src="https://skillicons.dev/icons?i=dotnet&theme=dark" height="40" alt=".NET / ASP.NET" title=".NET / ASP.NET" />
-          <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" height="40" alt="Node.js" title="Node.js" />
-          <img src="https://skillicons.dev/icons?i=angular&theme=dark" height="40" alt="Angular" title="Angular" />
-          <img src="https://skillicons.dev/icons?i=html&theme=dark" height="40" alt="HTML5" title="HTML5" />
-          <img src="https://skillicons.dev/icons?i=css&theme=dark" height="40" alt="CSS3" title="CSS3" />
+          <a href="https://dotnet.microsoft.com/" title=".NET / ASP.NET"><img src="https://skillicons.dev/icons?i=dotnet&theme=dark" height="40" alt=".NET / ASP.NET" /></a>
+          <a href="https://nodejs.org/" title="Node.js"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" height="40" alt="Node.js" /></a>
+          <a href="https://angular.dev/" title="Angular"><img src="https://skillicons.dev/icons?i=angular&theme=dark" height="40" alt="Angular" /></a>
+          <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="https://skillicons.dev/icons?i=html&theme=dark" height="40" alt="HTML5" /></a>
+          <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="https://skillicons.dev/icons?i=css&theme=dark" height="40" alt="CSS3" /></a>
         </nobr>
       </div>
     </td>
@@ -50,23 +50,23 @@
       <p align="center"><b>IDE и экосистема</b></p>
       <div style="white-space: nowrap;">
         <nobr>
-          <img src="https://skillicons.dev/icons?i=visualstudio&theme=dark" height="40" alt="Visual Studio" title="Visual Studio" />
-          <img src="https://skillicons.dev/icons?i=vscode&theme=dark" height="40" alt="VS Code" title="VS Code" />
-          <img src="https://skillicons.dev/icons?i=pycharm&theme=dark" height="40" alt="PyCharm" title="PyCharm" />
-          <img src="https://skillicons.dev/icons?i=androidstudio&theme=dark" height="40" alt="Android Studio" title="Android Studio" />
-          <img src="https://skillicons.dev/icons?i=git&theme=dark" height="40" alt="Git" title="Git" />
-          <img src="https://skillicons.dev/icons?i=github&theme=dark" height="40" alt="GitHub" title="GitHub" />
+          <a href="https://visualstudio.microsoft.com/" title="Visual Studio"><img src="https://skillicons.dev/icons?i=visualstudio&theme=dark" height="40" alt="Visual Studio" /></a>
+          <a href="https://code.visualstudio.com/" title="VS Code"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" height="40" alt="VS Code" /></a>
+          <a href="https://www.jetbrains.com/pycharm/" title="PyCharm"><img src="https://skillicons.dev/icons?i=pycharm&theme=dark" height="40" alt="PyCharm" /></a>
+          <a href="https://developer.android.com/studio" title="Android Studio"><img src="https://skillicons.dev/icons?i=androidstudio&theme=dark" height="40" alt="Android Studio" /></a>
+          <a href="https://git-scm.com/" title="Git"><img src="https://skillicons.dev/icons?i=git&theme=dark" height="40" alt="Git" /></a>
+          <a href="https://github.com/" title="GitHub"><img src="https://skillicons.dev/icons?i=github&theme=dark" height="40" alt="GitHub" /></a>
         </nobr>
       </div>
       <br/><br/>
       <p align="center"><b>ОС и терминал</b></p>
       <div style="white-space: nowrap;">
         <nobr>
-          <img src="https://skillicons.dev/icons?i=windows&theme=dark" height="40" alt="Windows" title="Windows" />
-          <img src="https://skillicons.dev/icons?i=linux&theme=dark" height="40" alt="Linux" title="Linux" />
-          <img src="https://skillicons.dev/icons?i=ubuntu&theme=dark" height="40" alt="Ubuntu" title="Ubuntu" />
-          <img src="https://skillicons.dev/icons?i=powershell&theme=dark" height="40" alt="PowerShell" title="PowerShell" />
-          <img src="https://skillicons.dev/icons?i=bash&theme=dark" height="40" alt="Bash" title="Bash" />
+          <a href="https://learn.microsoft.com/windows/" title="Windows"><img src="https://skillicons.dev/icons?i=windows&theme=dark" height="40" alt="Windows" /></a>
+          <a href="https://www.kernel.org/" title="Linux"><img src="https://skillicons.dev/icons?i=linux&theme=dark" height="40" alt="Linux" /></a>
+          <a href="https://ubuntu.com/" title="Ubuntu"><img src="https://skillicons.dev/icons?i=ubuntu&theme=dark" height="40" alt="Ubuntu" /></a>
+          <a href="https://learn.microsoft.com/powershell/" title="PowerShell"><img src="https://skillicons.dev/icons?i=powershell&theme=dark" height="40" alt="PowerShell" /></a>
+          <a href="https://www.gnu.org/software/bash/" title="Bash"><img src="https://skillicons.dev/icons?i=bash&theme=dark" height="40" alt="Bash" /></a>
         </nobr>
       </div>
     </td>
@@ -77,9 +77,9 @@
       <p align="center"><b>Базы данных</b></p>
       <div style="white-space: nowrap;">
         <nobr>
-          <img src="https://skillicons.dev/icons?i=postgres&theme=dark" height="40" alt="PostgreSQL" title="PostgreSQL" />
-          <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" height="40" alt="SQLite" title="SQLite" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="40" height="40" alt="MS SQL Server" title="MS SQL Server" style="vertical-align: middle; margin-left: 4px;" />
+          <a href="https://www.postgresql.org/" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" height="40" alt="PostgreSQL" /></a>
+          <a href="https://www.sqlite.org/" title="SQLite"><img src="https://skillicons.dev/icons?i=sqlite&theme=dark" height="40" alt="SQLite" /></a>
+          <a href="https://learn.microsoft.com/sql/sql-server/" title="MS SQL Server"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="40" height="40" alt="MS SQL Server" style="vertical-align: middle; margin-left: 4px;" /></a>
         </nobr>
       </div>
     </td>
